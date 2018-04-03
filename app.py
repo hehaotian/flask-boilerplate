@@ -6,7 +6,9 @@ from flask import Flask, render_template, request
 # from flask.ext.sqlalchemy import SQLAlchemy
 import logging
 from logging import Formatter, FileHandler
-from forms import *
+from forms import LoginForm
+from forms import ForgotForm
+from forms import RegisterForm
 import os
 
 #----------------------------------------------------------------------------#
@@ -49,6 +51,11 @@ def home():
 @app.route('/about')
 def about():
     return render_template('pages/placeholder.about.html')
+
+
+@app.route('/server')
+def about():
+    return render_template('pages/placeholder.server.html')
 
 
 @app.route('/login')
